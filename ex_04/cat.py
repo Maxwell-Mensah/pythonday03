@@ -16,7 +16,7 @@ class Cat:
     def get_name(self):
         return(self.name)
     
-    #création d'une méthode pour avoir l'attribut name d'un objet existant
+    #création d'une méthode pour avoir l'attribut age d'un objet existant
     def get_age(self):
         return self.age
     
