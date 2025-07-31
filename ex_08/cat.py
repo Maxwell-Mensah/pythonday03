@@ -90,8 +90,12 @@ class Cat:
                 if num==1:
                     print("I'm too playful for that... hic !")
                 else:
-                    action=random.choice([self.eat(), self.hello()]) #choix d'una action entre eat et hello
-                    action
+                    action=input("Quelles actions aimerez vous mener?? (eat/ hello) ")
+                    if hasattr(self, action):
+                        methode = getattr(self, action)
+                        methode()
+                    else:
+                        print("Action impossible")
         elif type(other)==Dog:
             if other.energy>=10:
                 other.energy=0
